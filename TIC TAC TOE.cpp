@@ -101,6 +101,7 @@ bool gameover(){
 
 
 int main() {
+	cout<<"\nWelocome to Tic Tac Toe";
 	char ch='Y';
 	do{		
 		int ct=0;	
@@ -131,7 +132,8 @@ int main() {
 			}
 		}
 
-	}while(ch=='y'||ch=='Y');
+	}
+	while(ch=='y'||ch=='Y');
 	
 	
 	
