@@ -7,7 +7,7 @@ char turn='X';
 int row,column;
 
 
-void display(){
+void display(){									//function to display the game board
 	system ("CLS");
 	cout<<"\n\t\t\t\tTIC TAC TOE\n\n";
 	cout<<"\tPlayer 1[X]\n\tPlayer 2[O]\n\n";
@@ -26,7 +26,7 @@ void display(){
 }
 
 
-void player_turn(){
+void player_turn(){						//funtion to alternate player turn
 	
 	if(turn=='X'){
 		cout<<"\n"<<"\t"<<"Player1 [X] turn\n\tEnter block Number:";
@@ -62,7 +62,7 @@ void player_turn(){
 			break;	
 	}
 	
-	if(turn=='X'&&board[row][column]!='O'&&board[row][column]!='X'){
+	if(turn=='X'&&board[row][column]!='O'&&board[row][column]!='X'){			
 		board[row][column]='X';
 		turn ='O';
 	}
@@ -79,7 +79,7 @@ void player_turn(){
 
 
 
-bool gameover(){
+bool gameover(){								//checks if game is over
 	int i,j;
 	for(i=0;i<3;i++){
 			if(board[i][0]==board[i][1]&&board[i][0]==board[i][2] || board[0][i]==board[1][i]&&board[0][i]==board[2][i])
